@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./quiz.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      
+        <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand text-light vibrate-1" href="#" > 
+            <strong>killQuiz</strong>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="#">Category</a>
+                </li>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">Quiz mode</a>
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">Rapid Fire</a>
+                        <a class="dropdown-item" href="#">Score mode</a>
+                        <a class="dropdown-item" href="#">comming soon</a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+
+        </div>
+      <div class="container-fluid">
+          <div class="row">
+              <nav class="col-md-2 sidebar text-center">
+                  <div>
+                        <h2 class=""><strong>Category</strong></h2>
+                        <br>
+                        <button id="myb" type="button" class="btn btn-light d-block w-100">Computer science</button>
+                        <br>
+                        <button type="button" class="btn btn-light d-block w-100">Facts</button>
+                        <br>
+                        <button type="button" class="btn btn-light d-block w-100">Maths</button>
+                        <br>
+                        <button type="button" class="btn btn-light d-block w-100">General knowledge</button>
+                        <br>
+                        <button type="button" class="btn btn-light d-block w-100">Sports</button>
+                        <br>
+                        <button type="button" class="btn btn-light d-block w-100">Movies</button>
+                        <br>
+                        <button type="button" class="btn btn-light d-block w-100">logos</button>
+
+                  </div>
+
+              </nav>
+              <div class="col-md-6">
+                  <div class="jumbotron w-100 h-100">
+                      <span class="welcome_screen blink-1"><strong>KillQuiz</strong></span>
+                      <p> Start killing Questions by answering them,
+                          And get Rewards
+                      </p>
+                      <button id="start_quiz" type="button" class="btn btn-secondary">Start Quiz</button>
+
+                  </div>
+                  <div id="quiz_div" class="jumbotron h-100 hidden">
+                      <div id="welcome_screen">
+                            
+                      </div>
+                      <div class="question_div">
+                      <h2 id="question" class=""></h2>
+                      <br>
+                      <ol id="option_ol" class="hidden">
+                          <li><input id="option1" name="options" type="radio"><span id="op1"></span></li>
+                          <br>
+                          <li><input id="option2" name="options" type="radio"><span id="op2"></span></li>
+                          <br>
+                          <li><input id="option3" name="options" type="radio"><span id="op3"></span></li>
+                          <br>
+                          <li><input id="option4" name="options" type="radio"><span id="op4"></span></li>
+                      </ol>
+                    </div>
+                      <div>
+                          <hr>
+                        <button id="submit_answer" type="button" class="btn btn-outline-dark">Submit Answer</button>
+                        <button id="skip" type="button" class="btn btn-outline-light text-dark">Skip</button>
+                        <div id="countdown" class="hidden">
+                                <div id="countdown-number" class="blink-1"></div>
+                                <svg>
+                                  <circle r="18" cx="20" cy="20"></circle>
+                                </svg>
+                            </div>
+                        
+                      </div>
+                      
+                  </div>
+
+              </div>
+              <div class="col-md-4 sidebar_right">
+                    <div class="quotebox">
+                        <blockquote class="bounce-top">The man who comes back through the door in the wall will never be quite the same as the man who went out.</blockquote>
+                        <cite class="bounce-top">Aldous Huxley</cite>
+                    </div>
+                    <hr class="hor">
+                    <br>
+                    <div id="score_timer" class="h-40 w-100">
+                        <div class="text-center" id="scoretag">
+                            
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="./quiz.js"></script>
+  </body>
+</html>
