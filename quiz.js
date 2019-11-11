@@ -45,9 +45,10 @@ $(document).ready(function(){
     function display_question(){
         random_no4 =[];
         numberGenerator(random_no4);
-        randomnumber = Math.floor((Math.random() * 20) + 1);
+        randomnumber = Math.floor((Math.random() * 19) + 1);
         console.log(question_array[0].results)
         // displaying question
+        console.log(randomnumber)
         $('#question').html('Q.'+question_array[0].results[randomnumber].question)
         $('#option_ol').removeClass('hidden')
         // storing all the answers in array
@@ -101,7 +102,7 @@ $(document).ready(function(){
                 // console.log(response[0].content.rendered)
                 // console.log(response[0].title.rendered)
                 var ram_number = Math.floor((Math.random() * 10) + 1); 
-                // $('blockquote').html(response[ram_number].content.rendered)
+                $('blockquote').html(response[ram_number].content.rendered)
                 $('cite').text(response[ram_number].title.rendered)
                 },
             error:function(response){
@@ -109,7 +110,7 @@ $(document).ready(function(){
                 }
             });
 
-    },3000);
+    },10000);
 
     function match_answer(){
         console.log('hello')
